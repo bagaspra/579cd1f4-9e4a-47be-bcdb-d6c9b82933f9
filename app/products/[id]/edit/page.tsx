@@ -2,6 +2,12 @@ import Breadcrumbs from '@/app/ui/products/breadcrumbs';
 import Form from '@/app/ui/products/edit-form';
 import { fetchCategories, fetchProductById } from '@/app/lib/data';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Edit Product',
+};
+
 export default async function Page({ params }: { params: { id: string } }) {
   const id = params.id;
   const [product, categories] = await Promise.all([

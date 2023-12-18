@@ -28,8 +28,6 @@ export async function fetchProductById(id: string) {
 }
 
 export async function fetchCategories() {
-  noStore();
-
   try {
     const response = await fetch(`${BASE_URL}/products/categories`);
     const data = await response.json();
@@ -43,6 +41,7 @@ export async function fetchFilteredProducts(
   query: string,
   currentPage: number
 ) {
+  noStore();
   const ITEMS_PER_PAGE = 9;
   const skip = (currentPage - 1) * ITEMS_PER_PAGE;
   const limit = ITEMS_PER_PAGE;
@@ -59,6 +58,7 @@ export async function fetchFilteredProducts(
 }
 
 export async function fetchTotalPages(query: string) {
+  noStore();
   try {
     const response = await fetch(
       `https://dummyjson.com/products/search?q=${query}`

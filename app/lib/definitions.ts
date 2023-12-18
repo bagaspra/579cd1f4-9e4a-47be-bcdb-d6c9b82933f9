@@ -1,5 +1,5 @@
 export type Product = {
-  id: number;
+  id: string;
   title: string;
   description: string;
   price: number;
@@ -10,6 +10,7 @@ export type Product = {
   category: string;
   thumbnail: string;
   images: string[];
+  date: string;
 };
 
 type Pagination = {

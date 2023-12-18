@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <p>WORK</p>
+        <p>WAIT</p>
       </div>
     </main>
   );

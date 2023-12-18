@@ -7,6 +7,12 @@ import Search from '../ui/search';
 import { fetchTotalPages } from '../lib/data';
 import Pagination from '../ui/products/pagination';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Product',
+};
+
 export default async function Page({
   searchParams,
 }: {
